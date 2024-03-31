@@ -5,7 +5,7 @@ import csv
 # Get the absolute path to the budget_data.csv file within the 'resources' directory
 budget_data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "resources", "budget_data.csv")
 # Define the path for the financial analysis report file
-analysis_report_path = "financial_analysis.txt"
+analysis_report_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "analysis", "financial_analysis.txt")
 
 # Function to calculate financial metrics
 def calculate_metrics(data):
