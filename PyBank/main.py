@@ -68,6 +68,7 @@ def export_to_file(analysis_results):
 # Read the CSV file
 with open(budget_data_path, 'r') as file:
     csv_reader = csv.DictReader(file, delimiter=',')
+    #It reads and get rid of the header file, so the data doesn't have the header file in it
     data = list(csv_reader)
 
 # Calculate metrics

@@ -21,10 +21,9 @@ def print_poll_results(candidate_votes, total_votes):
     output += f"Winner: {winner}\n"
     output += "-------------------------\n"
     
-    # Print the output
-    print(output)
+   
+    print(output)   
     
-    # Return the output
     return output
 
 # Function to export poll result report to a file
@@ -39,6 +38,7 @@ poll_candidate_and_votes = {}
 total_votes = 0
 # Read the CSV file
 with open(election_data_path, 'r') as file:
+    #It reads and get rid of the header file, so the data doesn't have the header file in it
     csv_reader = csv.DictReader(file, delimiter=',')
     for row in csv_reader:
         total_votes+= 1
